@@ -8,9 +8,9 @@ To start the code
 
 Step 1: install all the required liabrariries   [random, gym, numpy, collections import deque, keras, pybullet, math]
 
-Step 2: correct the path of the urdf file in the folllowing function {hadron = p.loadURDF("ur location of urdf file")}
+Step 2: correct the path of the urdf file in the folllowing pyhton script neural_net_for_hadron_1version2.py {hadron = p.loadURDF("ur location of urdf file")}
 
-Step 3: create awsum stuff and stay tuned
+Step 3: run the script, create awsum stuff and stay tuned!!!!
 
 will further update with he next versions of the codes and arduino codes for the robot 
 pls do comment update
