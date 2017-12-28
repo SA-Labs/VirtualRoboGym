@@ -6,18 +6,7 @@ In this we have used the robot HADRON, made a solidworks files and then exported
 
 To start the code
 
-Step 1: install all the required liabrariries 
-import random
-import gym
-import numpy as np
-from collections import deque
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.optimizers import Adam
-import pybullet as p
-import math
-import pybullet_data
-import time as t
+Step 1: install all the required liabrariries   [random, gym, numpy, collections import deque, keras, pybullet, math]
 
 Step 2: correct the path of the urdf file in the folllowing function {hadron = p.loadURDF("ur location of urdf file")}
 
