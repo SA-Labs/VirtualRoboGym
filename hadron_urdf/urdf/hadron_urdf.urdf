@@ -1,0 +1,891 @@
+<robot
+  name="hadron_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.12049 0.02434 0.24105"
+        rpy="0 0 0" />
+      <mass
+        value="0.12859" />
+      <inertia
+        ixx="0.00045781"
+        ixy="1.7535E-05"
+        ixz="4.7429E-05"
+        iyy="0.00029671"
+        iyz="2.2693E-05"
+        izz="0.000194" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lh">
+    <inertial>
+      <origin
+        xyz="0.0063633 -0.00045084 0.005219"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096497" />
+      <inertia
+        ixx="7.3178E-07"
+        ixy="-4.4687E-09"
+        ixz="1.9803E-09"
+        iyy="2.9532E-07"
+        iyz="2.8745E-07"
+        izz="4.3656E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/lh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/lh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lhb"
+    type="continuous">
+    <origin
+      xyz="-0.11052 -0.0628 0.28575"
+      rpy="-1.7167 0.043718 -2.9675" />
+    <parent
+      link="base_link" />
+    <child
+      link="lh" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="lh1">
+    <inertial>
+      <origin
+        xyz="-0.013598 0.0019264 0.037691"
+        rpy="0 0 0" />
+      <mass
+        value="0.037526" />
+      <inertia
+        ixx="1.6432E-05"
+        ixy="-8.5053E-08"
+        ixz="-3.5882E-07"
+        iyy="1.2746E-05"
+        iyz="-3.0384E-06"
+        izz="3.7068E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/lh1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/lh1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh01"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0.39914 3.1416" />
+    <parent
+      link="lh" />
+    <child
+      link="lh1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="lh2">
+    <inertial>
+      <origin
+        xyz="-0.018771 0.0071206 0.043526"
+        rpy="0 0 0" />
+      <mass
+        value="0.039826" />
+      <inertia
+        ixx="3.2464E-05"
+        ixy="-2.6612E-07"
+        ixz="4.0151E-06"
+        iyy="3.0232E-05"
+        iyz="1.9811E-06"
+        izz="3.318E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/lh2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/lh2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lh12"
+    type="continuous">
+    <origin
+      xyz="0.0020739 0 0.067034"
+      rpy="-5.8713E-16 0.12054 -4.054E-16" />
+    <parent
+      link="lh1" />
+    <child
+      link="lh2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rh">
+    <inertial>
+      <origin
+        xyz="0.0059545 -0.0031561 -0.0066977"
+        rpy="0 0 0" />
+      <mass
+        value="0.0096497" />
+      <inertia
+        ixx="7.3194E-07"
+        ixy="-4.8656E-09"
+        ixz="5.1332E-09"
+        iyy="2.9536E-07"
+        iyz="2.881E-07"
+        izz="4.3676E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bth"
+    type="continuous">
+    <origin
+      xyz="-0.13961 0.10507 0.31115"
+      rpy="1.4251 -0.0189 -2.9583" />
+    <parent
+      link="base_link" />
+    <child
+      link="rh" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rh1">
+    <inertial>
+      <origin
+        xyz="-0.0024803 -0.0014485 -0.0046369"
+        rpy="0 0 0" />
+      <mass
+        value="0.037526" />
+      <inertia
+        ixx="3.7068E-06"
+        ixy="3.5882E-07"
+        ixz="3.0384E-06"
+        iyy="1.6432E-05"
+        iyz="-8.5053E-08"
+        izz="1.2746E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rh1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rh1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rh01"
+    type="continuous">
+    <origin
+      xyz="-0.00050444 0 0.031483"
+      rpy="1.5708 -1.2482 -3.1416" />
+    <parent
+      link="rh" />
+    <child
+      link="rh1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rh2">
+    <inertial>
+      <origin
+        xyz="0.0053295 0.0098311 0.0056848"
+        rpy="0 0 0" />
+      <mass
+        value="0.039826" />
+      <inertia
+        ixx="3.2464E-05"
+        ixy="-2.6612E-07"
+        ixz="4.0151E-06"
+        iyy="3.0232E-05"
+        iyz="1.9811E-06"
+        izz="3.318E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rh2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rh2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rh12"
+    type="continuous">
+    <origin
+      xyz="0.067843 -0.0015655 0"
+      rpy="-1.5708 1.1449E-15 -1.859" />
+    <parent
+      link="rh1" />
+    <child
+      link="rh2" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="ll">
+    <inertial>
+      <origin
+        xyz="0.041975 0.030468 -0.00042427"
+        rpy="0 0 0" />
+      <mass
+        value="0.017903" />
+      <inertia
+        ixx="4.8267E-06"
+        ixy="-1.2663E-06"
+        ixz="2.1249E-06"
+        iyy="4.7725E-06"
+        iyz="2.1536E-06"
+        izz="3.3928E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lb"
+    type="continuous">
+    <origin
+      xyz="-0.13171 0.050956 0.15209"
+      rpy="0.24049 0.12307 -1.3962" />
+    <parent
+      link="base_link" />
+    <child
+      link="ll" />
+    <axis
+      xyz="0 0.99993 0.011461" />
+  </joint>
+  <link
+    name="ll1">
+    <inertial>
+      <origin
+        xyz="-0.0060806 0.026764 0.010374"
+        rpy="0 0 0" />
+      <mass
+        value="0.037677" />
+      <inertia
+        ixx="1.667E-05"
+        ixy="-8.5758E-08"
+        ixz="-3.6038E-07"
+        iyy="1.2944E-05"
+        iyz="-3.126E-06"
+        izz="3.7463E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ll01"
+    type="continuous">
+    <origin
+      xyz="0.024803 0.045703 -0.037799"
+      rpy="-3.1416 -0.012822 1.5708" />
+    <parent
+      link="ll" />
+    <child
+      link="ll1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ll2">
+    <inertial>
+      <origin
+        xyz="-0.0077261 0.024559 0.030294"
+        rpy="0 0 0" />
+      <mass
+        value="0.05715" />
+      <inertia
+        ixx="5.7881E-05"
+        ixy="-6.0419E-15"
+        ixz="2.3405E-06"
+        iyy="5.2696E-05"
+        iyz="-4.1257E-15"
+        izz="5.3933E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ll12"
+    type="continuous">
+    <origin
+      xyz="0.0020734 0.0086 0.067831"
+      rpy="1.0004E-15 0.049331 1.7785E-15" />
+    <parent
+      link="ll1" />
+    <child
+      link="ll2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="ll3">
+    <inertial>
+      <origin
+        xyz="0.0022982 -0.016989 -0.027262"
+        rpy="0 0 0" />
+      <mass
+        value="0.017903" />
+      <inertia
+        ixx="4.8449E-06"
+        ixy="-1.2751E-06"
+        ixz="2.1348E-06"
+        iyy="4.7945E-06"
+        iyz="2.1644E-06"
+        izz="3.3981E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ll23"
+    type="continuous">
+    <origin
+      xyz="-0.0027 0 0.0709"
+      rpy="3.1416 -0.024806 3.6093E-16" />
+    <parent
+      link="ll2" />
+    <child
+      link="ll3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="ll4">
+    <inertial>
+      <origin
+        xyz="0.0056303 0.013992 0.032152"
+        rpy="0 0 0" />
+      <mass
+        value="0.049115" />
+      <inertia
+        ixx="3.9086E-06"
+        ixy="-1.5207E-06"
+        ixz="9.8715E-08"
+        iyy="1.8428E-06"
+        iyz="9.498E-08"
+        izz="5.7406E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/ll4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ll34"
+    type="continuous">
+    <origin
+      xyz="0 0.01392 -0.054593"
+      rpy="-5.0002E-14 1.5576 -1.5708" />
+    <parent
+      link="ll3" />
+    <child
+      link="ll4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="rl">
+    <inertial>
+      <origin
+        xyz="-0.014376 0.040645 -0.024768"
+        rpy="0 0 0" />
+      <mass
+        value="0.017903" />
+      <inertia
+        ixx="4.117E-06"
+        ixy="7.8457E-07"
+        ixz="1.9766E-06"
+        iyy="4.5886E-06"
+        iyz="-1.5385E-06"
+        izz="2.4831E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="brl"
+    type="continuous">
+    <origin
+      xyz="-0.072249 0.080503 0.19884"
+      rpy="-0.25684 -0.22879 1.7733" />
+    <parent
+      link="base_link" />
+    <child
+      link="rl" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rl1">
+    <inertial>
+      <origin
+        xyz="0.0065049 -0.005392 0.017993"
+        rpy="0 0 0" />
+      <mass
+        value="0.037526" />
+      <inertia
+        ixx="1.6432E-05"
+        ixy="-8.5053E-08"
+        ixz="-3.5882E-07"
+        iyy="1.2746E-05"
+        iyz="-3.0384E-06"
+        izz="3.7068E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.50196 0.50196 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl01"
+    type="continuous">
+    <origin
+      xyz="0 0.028761 -0.054343"
+      rpy="3.1416 0.066046 1.5708" />
+    <parent
+      link="rl" />
+    <child
+      link="rl1" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rl2">
+    <inertial>
+      <origin
+        xyz="0.038437 -0.0049975 -0.00093777"
+        rpy="0 0 0" />
+      <mass
+        value="0.05715" />
+      <inertia
+        ixx="5.3933E-06"
+        ixy="-2.3405E-06"
+        ixz="7.9977E-15"
+        iyy="5.7881E-05"
+        iyz="-1.587E-16"
+        izz="5.2696E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl12"
+    type="continuous">
+    <origin
+      xyz="0.0015655 0 0.067843"
+      rpy="1.5708 -1.5145 -1.3809E-14" />
+    <parent
+      link="rl1" />
+    <child
+      link="rl2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rl3">
+    <inertial>
+      <origin
+        xyz="0.0026839 0.010177 -0.023992"
+        rpy="0 0 0" />
+      <mass
+        value="0.017903" />
+      <inertia
+        ixx="4.5718E-06"
+        ixy="-1.1309E-06"
+        ixz="2.1271E-06"
+        iyy="4.7809E-06"
+        iyz="1.4526E-06"
+        izz="3.1187E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl23"
+    type="continuous">
+    <origin
+      xyz="0.0812 0.0027 0"
+      rpy="-1.5708 -8.285E-15 1.7101" />
+    <parent
+      link="rl2" />
+    <child
+      link="rl3" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="rl4">
+    <inertial>
+      <origin
+        xyz="0.032122 -0.0026723 -0.014344"
+        rpy="0 0 0" />
+      <mass
+        value="0.049115" />
+      <inertia
+        ixx="5.7406E-06"
+        ixy="-9.8715E-08"
+        ixz="-9.498E-08"
+        iyy="3.9086E-06"
+        iyz="-1.5207E-06"
+        izz="1.8428E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hadron_urdf/meshes/rl4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rl34"
+    type="continuous">
+    <origin
+      xyz="0 0.0401403654822361 -0.0544957136095978"
+      rpy="1.5707963267949 -0.0230856149439591 -1.57079632679493" />
+    <parent
+      link="rl3" />
+    <child
+      link="rl4" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
