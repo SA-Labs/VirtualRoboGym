@@ -15,7 +15,7 @@ Step 3: run the script, create awsum stuff and stay tuned!!!!
 will further update with he next versions of the codes and arduino codes for the robot 
 pls do comment update
 
-For further research paper and details check my blog: https://salabs.io
+For further research paper and details check my blog: https://salabs.me
 email: shresthagrawal.31@gmail.com / sunfall6@gmail.com
 
 
